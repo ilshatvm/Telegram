@@ -7,6 +7,13 @@ android {
     namespace = "com.example.telegram"
     compileSdk = 34
 
+    // viewBinding.enable = true
+
+    // https://developer.android.com/topic/libraries/view-binding
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.telegram"
         minSdk = 21
@@ -45,4 +52,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // MaterialDrawer https://github.com/mikepenz/MaterialDrawer/tree/v9.0.2
+    implementation(libs.materialdrawer)
+    implementation(libs.androidx.annotation)
+    implementation(libs.androidx.recyclerview)
 }
