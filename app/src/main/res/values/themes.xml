@@ -5,6 +5,7 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="materialDrawerStyle">@style/Widget.MaterialDrawerStyleCustom</item>
         <item name="materialDrawerHeaderStyle">@style/Widget.MaterialDrawerHeaderStyleCustom</item>
+        <item name="popupTheme">@style/actionMenu</item>
     </style>
 
     <style name="Widget.MaterialDrawerStyleCustom" parent="Widget.MaterialDrawerStyle">
@@ -16,6 +17,11 @@
     <style name="Widget.MaterialDrawerHeaderStyleCustom" parent="">
         <item name="materialDrawerHeaderSelectionText">@color/white</item>
         <item name="materialDrawerHeaderSelectionSubtext">@color/white</item>
+    </style>
+    
+    <style name="actionMenu" parent="Theme.AppCompat.Light">
+        <item name="background">@color/white</item>
+        <item name="actionMenuTextColor">@color/black</item>
     </style>
 
     <style name="Theme.Telegram" parent="Base.Theme.Telegram" />
