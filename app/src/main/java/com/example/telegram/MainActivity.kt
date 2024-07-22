@@ -1,7 +1,6 @@
 package com.example.telegram
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.telegram.databinding.ActivityMainBinding
+import com.example.telegram.ui.ChatsFragment
+import com.example.telegram.ui.SettingsFragment
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
@@ -49,10 +50,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-
+        initActionBar()
+        supportFragmentManager.beginTransaction().replace(R.id.dataContainer, ChatsFragment()).commit()
         createHeader()
         createDrawer()
-        initActionBar()
     }
 
     private fun initActionBar() {
@@ -132,7 +133,9 @@ class MainActivity : AppCompatActivity() {
                 itemHelp,
             )
             onDrawerItemClickListener = { _, _, position ->
-                Toast.makeText(applicationContext, position.toString(), Toast.LENGTH_SHORT).show()
+                when(position){
+                    7 -> supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.dataContainer, SettingsFragment()).commit()
+                }
                 false
             }
         }
