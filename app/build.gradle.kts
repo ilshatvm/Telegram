@@ -57,4 +57,7 @@ dependencies {
     implementation(libs.materialdrawer)
     implementation(libs.androidx.annotation)
     implementation(libs.androidx.recyclerview)
+
+    // CircleImageView https://github.com/hdodenhof/CircleImageView
+    implementation(libs.circleimageview)
 }
