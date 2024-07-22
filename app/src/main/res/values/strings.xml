@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Telegram</string>
     <string name="drawer_item_action_create_group">Создать группу</string>
+    <string name="drawer_item_action_create_secret_chat">Создать секретный чат</string>
+    <string name="drawer_item_action_create_channel">Создать канал</string>
+    <string name="drawer_item_action_contacts">Контакты</string>
+    <string name="drawer_item_action_calls">Звонки</string>
+    <string name="drawer_item_action_favorites">Избранное</string>
+    <string name="drawer_item_action_settings">Настройки</string>
+    <string name="drawer_item_action_invite">Пригласить друзей</string>
+    <string name="drawer_item_action_help">Вопросы о Telegram</string>
 </resources>

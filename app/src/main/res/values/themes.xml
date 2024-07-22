@@ -3,6 +3,19 @@
     <style name="Base.Theme.Telegram" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="materialDrawerStyle">@style/Widget.MaterialDrawerStyleCustom</item>
+        <item name="materialDrawerHeaderStyle">@style/Widget.MaterialDrawerHeaderStyleCustom</item>
+    </style>
+
+    <style name="Widget.MaterialDrawerStyleCustom" parent="Widget.MaterialDrawerStyle">
+        <item name="materialDrawerBackground">@color/white</item>
+        <item name="materialDrawerPrimaryText">@color/drawer_item_text</item>
+        <item name="materialDrawerSelectedBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="Widget.MaterialDrawerHeaderStyleCustom" parent="">
+        <item name="materialDrawerHeaderSelectionText">@color/white</item>
+        <item name="materialDrawerHeaderSelectionSubtext">@color/white</item>
     </style>
 
     <style name="Theme.Telegram" parent="Base.Theme.Telegram" />
