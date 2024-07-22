@@ -6,4 +6,6 @@
     <color name="primaryDark">#FF007ACC</color>
     <color name="accent">#FFFFFFFF</color>
     <color name="drawer_item_text">#FF000000</color>
+    <color name="grey">#837E7E</color>
+    <color name="grey_light">#C3C3C3</color>
 </resources>
