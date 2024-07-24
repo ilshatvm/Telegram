@@ -16,6 +16,10 @@ open class BaseFragment(private val layout: Int) : Fragment(), MenuProvider {
 
     private lateinit var mRootView: View
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,

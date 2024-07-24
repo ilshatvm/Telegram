@@ -1,5 +1,6 @@
 package com.example.telegram
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.telegram.databinding.ActivityMainBinding
+import com.example.telegram.ui.activities.RegisterActivity
 import com.example.telegram.ui.fragments.ChatsFragment
 import com.example.telegram.ui.objects.AppDrawer
 
@@ -40,9 +42,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFunc() {
-        initActionBar()
-        mAppDrawer.create()
-        supportFragmentManager.beginTransaction().replace(R.id.dataContainer, ChatsFragment()).commit()
+        if (false) {
+            initActionBar()
+            mAppDrawer.create()
+            supportFragmentManager.beginTransaction().replace(R.id.dataContainer, ChatsFragment())
+                .commit()
+        } else {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun initActionBar() {
@@ -64,6 +73,6 @@ class MainActivity : AppCompatActivity() {
     private fun initFields() {
         mToolbar = mBinding.mainToolbar
         mDrawerLayout = mBinding.root
-        mAppDrawer = AppDrawer(this,mToolbar,mBinding)
+        mAppDrawer = AppDrawer(this, mToolbar, mBinding)
     }
 }
