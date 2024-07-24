@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar
 import com.example.telegram.R
 import com.example.telegram.databinding.ActivityMainBinding
 import com.example.telegram.ui.fragments.SettingsFragment
+import com.example.telegram.utilits.replaceFragment
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
@@ -87,7 +88,7 @@ class AppDrawer(private val mainActivity:AppCompatActivity, val toolbar: Toolbar
             )
             onDrawerItemClickListener = { _, _, position ->
                 when(position){
-                    7 -> mainActivity.supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.dataContainer, SettingsFragment()).commit()
+                    7 -> mainActivity.replaceFragment(SettingsFragment())
                 }
                 false
             }
